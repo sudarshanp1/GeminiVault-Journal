@@ -5,7 +5,7 @@
 [![Google Cloud](https://img.shields.io/badge/Google_Cloud_Run-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)](https://cloud.google.com/run)
 [![Gemini API](https://img.shields.io/badge/Gemini_API-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 
-ReflectAI is a full-stack, user-authenticated reflection and journaling application built with React, Node.js/Express, Cloud Firestore, and the Gemini 3.6 Flash API. It provides a private, user-isolated sanctuary where users can write multi-turn journal reflections, receive empathetic insights, brainstorm creative paths forward, and generate structured executive summaries.
+Gemini Vault Journa is a full-stack, user-authenticated reflection and journaling application built with React, Node.js/Express, Cloud Firestore, and the Gemini 3.6 Flash API. It provides a private, user-isolated sanctuary where users can write multi-turn journal reflections, receive empathetic insights, brainstorm creative paths forward, and generate structured executive summaries.
 
 ---
 
@@ -77,7 +77,7 @@ flowchart TD
 
 ## Secret Management Setup
 
-ReflectAI adheres to zero-hardcoding hygiene. Sensitive credentials such as `GEMINI_API_KEY` are stored in Google Cloud Secret Manager and accessed via runtime environment injection.
+Gemini Vault Journal adheres to zero-hardcoding hygiene. Sensitive credentials such as `GEMINI_API_KEY` are stored in Google Cloud Secret Manager and accessed via runtime environment injection.
 
 ### 1. Create and Populate the Secret
 ```bash
@@ -145,7 +145,7 @@ Deploy the application as a containerized service directly to Google Cloud Run:
 
 ```bash
 # Build and deploy service to Cloud Run
-gcloud run deploy reflectai-app \
+gcloud run deploy Gemini Vault Journal-app \
   --source . \
   --region asia-southeast1 \
   --platform managed \
@@ -158,7 +158,7 @@ gcloud run deploy reflectai-app \
 To register the service for automated challenge verification:
 
 ```bash
-gcloud run services update reflectai-app \
+gcloud run services update Gemini Vault Journal-app \
   --update-labels=dev-tutorial=cloud-run-ai-challenge \
   --region=asia-southeast1
 ```
