@@ -1,4 +1,4 @@
-# ReflectAI - User-Authenticated Journaling with Gemini & Cloud Firestore
+# Gemini Vault Journal - User-Authenticated Journaling with Gemini & Cloud Firestore
 
 [![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![Firebase](https://img.shields.io/badge/Firebase_Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
