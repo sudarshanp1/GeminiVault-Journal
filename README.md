@@ -12,13 +12,13 @@ ReflectAI is a full-stack, user-authenticated reflection and journaling applicat
 ## Application Previews
 
 ### Main Dashboard & Emotional Pulse
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/18ec90f8-b8a4-46c8-bf94-6bcfd9b063c4" />
+<img width="1920" height="826" alt="image" src="https://github.com/user-attachments/assets/61d49b09-8daf-4d26-8b0b-dd46a653735b" />
 
 ### Reflection Editor & Mood Analytics
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/9c8f44c4-a8be-4e12-ba53-ffc6a28e4798" />
+<img width="1920" height="804" alt="image (1)" src="https://github.com/user-attachments/assets/c5667063-de60-42d4-b368-eca13107feee" />
 
 ### Technical Mentor AI Mode
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b701b5c6-57ca-4fe7-b707-36754685ac7e" />
+<img width="1920" height="810" alt="image (2)" src="https://github.com/user-attachments/assets/d17f1dd0-8e49-4d9e-80ac-7cf0b13d457b" />
 
 
 ---
