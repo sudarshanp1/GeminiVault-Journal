@@ -1,0 +1,133 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and settings metadata",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Firebase Auth UID"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "User display name"
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "User avatar image URL"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Account registration timestamp"
+        },
+        "lastLoginAt": {
+          "type": "string",
+          "description": "Last login timestamp"
+        }
+      },
+      "required": ["uid", "email"]
+    },
+    "JournalEntry": {
+      "title": "JournalEntry",
+      "description": "A multi-turn personal journal or reflection session",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the journal entry"
+        },
+        "userId": {
+          "type": "string",
+          "description": "UID of the owning authenticated user"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title or theme of the reflection",
+          "maxLength": 200
+        },
+        "category": {
+          "type": "string",
+          "description": "Category of the entry (reflection, brainstorm, gratitude, etc.)",
+          "maxLength": 50
+        },
+        "summary": {
+          "type": "string",
+          "description": "Gemini-generated reflection summary or key insights",
+          "maxLength": 5000
+        },
+        "turns": {
+          "type": "array",
+          "description": "Ordered multi-turn dialog between the user and Gemini"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Creation timestamp in ISO format"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Last updated timestamp in ISO format"
+        }
+      },
+      "required": ["id", "userId", "title", "createdAt", "updatedAt"]
+    },
+    "Interaction": {
+      "title": "Interaction",
+      "description": "A single prompt and Gemini response interaction log for auditing and quick access",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the interaction"
+        },
+        "userId": {
+          "type": "string",
+          "description": "UID of the owning user"
+        },
+        "prompt": {
+          "type": "string",
+          "description": "User prompt or reflection text",
+          "maxLength": 10000
+        },
+        "response": {
+          "type": "string",
+          "description": "Gemini-generated output",
+          "maxLength": 20000
+        },
+        "mode": {
+          "type": "string",
+          "description": "Mode of interaction: reflection, brainstorm, summary, or conversation",
+          "maxLength": 50
+        },
+        "modelUsed": {
+          "type": "string",
+          "description": "The Gemini model that responded",
+          "maxLength": 100
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp of the interaction"
+        }
+      },
+      "required": ["id", "userId", "prompt", "response", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Authenticated user's profile"
+    },
+    "/users/{userId}/entries/{entryId}": {
+      "schema": "JournalEntry",
+      "description": "User-isolated multi-turn journal reflections"
+    },
+    "/users/{userId}/interactions/{interactionId}": {
+      "schema": "Interaction",
+      "description": "User-isolated single interactions with Gemini"
+    }
+  }
+}

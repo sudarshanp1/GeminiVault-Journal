@@ -1,0 +1,8 @@
+{
+  "name": "ReflectAI",
+  "description": "User-authenticated personal reflections and journaling with Gemini AI and Cloud Firestore",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
